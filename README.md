@@ -25,3 +25,39 @@ This project replicates the look and feel of Twitter, including layout, styling,
 ---
 
 ## 📂 Project Structure
+twitter-ui-clone/
+│
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+
+
+3. Open `xtwitter.html` in your browser
+
+---
+
+## 🌐 Live Demo
+
+*(Add GitHub Pages link here if deployed)*
+
+---
+
+## 📈 Future Improvements
+
+- Add backend (Node.js / Firebase)
+- User authentication
+- Real tweet posting & storage
+- Dark mode toggle
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork this repo and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is for educational purposes only.
