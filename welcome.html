@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - X Replica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="twitter.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+    <div class="page-shell">
+        <aside class="sidebar">
+            <a class="brand" href="welcome.html">
+                <i class="fab fa-twitter"></i>
+                X Replica
+            </a>
+            <ul class="sidebar-nav">
+                <li><a data-page="home" href="welcome.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a data-page="explore" href="explore.html"><i class="fas fa-hashtag"></i> Explore</a></li>
+                <li><a data-page="notifications" href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a data-page="messages" href="messages.html"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a data-page="search" href="search.html"><i class="fas fa-search"></i> Search</a></li>
+                <li><a data-page="profile" href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a data-page="settings" href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <section class="topbar">
+                <h1>Home</h1>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="search" placeholder="Search X">
+                </div>
+            </section>
+
+            <section class="card tweet-compose">
+                <h2 class="section-title">What's happening?</h2>
+                <form id="tweet-form">
+                    <textarea id="tweet-text" placeholder="Share your thoughts..."></textarea>
+                    <input type="file" id="tweet-image" accept="image/*" style="border:none; background:#f7f9fb; padding:12px 14px; border-radius:16px; margin-top:12px;" />
+                    <div id="tweet-image-preview" style="display:none; margin-top:12px;"></div>
+                    <button type="submit">Tweet</button>
+                </form>
+            </section>
+
+            <section id="feed">
+                <article class="tweet-card">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar"></div>
+                        <div>
+                            <strong>Design Team</strong>
+                            <div class="tweet-meta">@designteam · 2h</div>
+                        </div>
+                    </div>
+                    <div class="tweet-content">
+                        <p>Launching a new experience today: clean layouts, quick idea sharing, and better community engagement.</p>
+                    </div>
+                </article>
+                <article class="tweet-card">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar"></div>
+                        <div>
+                            <strong>Product Studio</strong>
+                            <div class="tweet-meta">@productstudio · 5h</div>
+                        </div>
+                    </div>
+                    <div class="tweet-content">
+                        <p>Great conversations on remote collaboration and modern design systems. Join the chat.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <aside class="right-panel">
+            <div class="section">
+                <h2>Trends for you</h2>
+                <article class="topic-card">
+                    <div>
+                        <strong>#StudioLaunch</strong>
+                    </div>
+                    <span>18.3K Tweets</span>
+                </article>
+                <article class="topic-card">
+                    <div>
+                        <strong>#DesignLife</strong>
+                    </div>
+                    <span>11.7K Tweets</span>
+                </article>
+            </div>
+            <div class="section">
+                <h2>Who to follow</h2>
+                <article class="suggestion-card">
+                    <div>
+                        <strong>UX Expert</strong>
+                        <p>@uxexpert</p>
+                    </div>
+                    <button>Follow</button>
+                </article>
+                <article class="suggestion-card">
+                    <div>
+                        <strong>Future Maker</strong>
+                        <p>@futuremaker</p>
+                    </div>
+                    <button>Follow</button>
+                </article>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* General body styles */
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1e8ed; /* Light gray background for the body */
+    font-family: Arial, sans-serif;
+    color: #000; /* Black text color for better readability */
+}
+
+/* Container wrapper styles */
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Control the max-width of the container */
+}
+
+/* Main container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* White background for the container */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    margin-left: 20px; /* Space between image and form */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 26px;
+    color: #000; /* Black color for headings */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 span {
+    color: #1da1f2; /* Twitter blue for emphasis */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Label styling */
+label {
+    font-size: 16px;
+    color: #000; /* Black color for labels */
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    max-width: 400px;
+    height: 40px; /* Increased height for better usability */
+    padding: 10px;
+    border-radius: 20px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light gray border */
+    margin-bottom: 15px;
+    background-color: #f9f9f9; /* Very light gray background */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input focus styling */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: 2px solid #1da1f2; /* Blue outline on focus */
+    outline-offset: 2px;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    background-color: #1da1f2; /* Twitter blue background */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+/* Button link styling */
+button a {
+    color: #fff; /* White text color for links inside button */
+    text-decoration: none;
+}
+
+/* Button hover styling */
+button:hover {
+    background-color: #0c7ecf; /* Darker blue on hover */
+}
+
+/* Paragraph styling */
+p {
+    font-size: 14px;
+    color: #000; /* Black text color for paragraphs */
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Link styling inside paragraphs */
+p a {
+    color: #1da1f2; /* Twitter blue for links */
+    text-decoration: none;
+}
+
+/* Link hover styling inside paragraphs */
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Image container styling */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Signup image styling */
+#signup {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

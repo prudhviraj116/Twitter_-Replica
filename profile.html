@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - X Replica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="twitter.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="profile">
+    <div class="page-shell">
+        <aside class="sidebar">
+            <a class="brand" href="welcome.html">
+                <i class="fab fa-twitter"></i>
+                X Replica
+            </a>
+            <ul class="sidebar-nav">
+                <li><a data-page="home" href="welcome.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a data-page="explore" href="explore.html"><i class="fas fa-hashtag"></i> Explore</a></li>
+                <li><a data-page="notifications" href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a data-page="messages" href="messages.html"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a data-page="search" href="search.html"><i class="fas fa-search"></i> Search</a></li>
+                <li><a data-page="profile" href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a data-page="settings" href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <section class="topbar">
+                <h1>Profile</h1>
+                <div class="page-actions">
+                    <button id="edit-profile-btn" class="primary"><i class="fas fa-edit"></i> Edit profile</button>
+                    <a href="follow-requests.html"><i class="fas fa-user-friends"></i> Follow requests</a>
+                </div>
+            </section>
+
+            <section class="card profile-card">
+                <div class="profile-banner" id="profile-banner"></div>
+                <div class="profile-header">
+                    <div class="profile-avatar" id="profile-avatar"></div>
+                    <div>
+                        <strong id="profile-name">John Doe</strong>
+                        <p id="profile-handle">@johndoe</p>
+                        <p id="profile-bio">Designer, creator and community builder sharing product updates and daily inspiration.</p>
+                    </div>
+                </div>
+                <div class="profile-summary">
+                    <div>
+                        <span>Following</span>
+                        <strong>128</strong>
+                    </div>
+                    <div>
+                        <span>Followers</span>
+                        <strong>24.8K</strong>
+                    </div>
+                    <div>
+                        <span>Interests</span>
+                        <strong id="interest-count">5</strong>
+                    </div>
+                </div>
+                <div class="profile-meta" id="profile-interests">
+                    <span class="profile-chip">Design</span>
+                    <span class="profile-chip">Product</span>
+                    <span class="profile-chip">Remote work</span>
+                    <span class="profile-chip">Community</span>
+                    <span class="profile-chip">Events</span>
+                </div>
+            </section>
+
+            <section class="card profile-section">
+                <div class="blog-card">
+                    <h3>Blog posts</h3>
+                    <p>Published insights, creative process notes, and community updates shared from your profile.</p>
+                    <article class="blog-card" style="margin-top: 16px;">
+                        <h3>How to build consistent product UI</h3>
+                        <p>Creating components that work across teams starts with clear design tokens and patterns.</p>
+                    </article>
+                    <article class="blog-card" style="margin-top: 16px;">
+                        <h3>Remote collaboration best practices</h3>
+                        <p>Use asynchronous updates, shared docs, and small daily check-ins to keep momentum high.</p>
+                    </article>
+                </div>
+                <div class="image-post">
+                    <h3>Featured media</h3>
+                    <p>Posts with images and visual storytelling that bring your work to life.</p>
+                    <img src="https://via.placeholder.com/760x420?text=Featured+Image" alt="Featured post">
+                </div>
+            </section>
+        </main>
+
+        <aside class="right-panel">
+            <div class="section">
+                <h2>Profile quick links</h2>
+                <div class="search-item">
+                    <div>
+                        <strong>People search</strong>
+                        <p>Find new profiles and follow people with shared interests.</p>
+                    </div>
+                    <a class="primary" href="search.html">Search</a>
+                </div>
+                <div class="search-item">
+                    <div>
+                        <strong>Account settings</strong>
+                        <p>Update security, notifications, and privacy preferences.</p>
+                    </div>
+                    <a class="primary" href="settings.html">Settings</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <div class="modal-overlay" id="profile-edit-modal">
+        <div class="modal-card">
+            <button class="close-modal" id="close-profile-modal"><i class="fas fa-times"></i></button>
+            <h2>Edit profile</h2>
+            <div class="modal-body">
+                <div class="form-row">
+                    <label for="profile-name-input">Name</label>
+                    <input type="text" id="profile-name-input" value="John Doe">
+                </div>
+                <div class="form-row">
+                    <label for="profile-handle-input">Handle</label>
+                    <input type="text" id="profile-handle-input" value="@johndoe">
+                </div>
+                <div class="form-row">
+                    <label for="profile-bio-input">Bio</label>
+                    <textarea id="profile-bio-input">Designer, creator and community builder sharing product updates and daily inspiration.</textarea>
+                </div>
+                <div class="form-row">
+                    <label for="profile-interests-input">Interests (comma separated)</label>
+                    <input type="text" id="profile-interests-input" value="Design, Product, Remote work, Community, Events">
+                </div>
+                <div class="form-row upload-preview">
+                    <div>
+                        <label for="profile-avatar-input">Profile image</label>
+                        <input type="file" id="profile-avatar-input" accept="image/*">
+                        <img id="profile-avatar-preview" src="https://via.placeholder.com/96?text=Avatar" alt="Avatar preview">
+                    </div>
+                    <div>
+                        <label for="profile-cover-input">Cover image</label>
+                        <input type="file" id="profile-cover-input" accept="image/*">
+                        <img id="profile-cover-preview" src="https://via.placeholder.com/400x140?text=Cover+preview" alt="Cover preview">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="cancel-profile-btn">Cancel</button>
+                <button id="save-profile-btn" class="primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

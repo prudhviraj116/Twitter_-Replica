@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to X Replica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="twitter.css">
+</head>
+<body class="auth-page">
+    <article class="auth-card">
+        <div class="auth-brand">
+            <i class="fab fa-twitter"></i>
+            X Replica
+        </div>
+        <h1>Sign in to X</h1>
+        <p>Access your account and catch up with the latest posts from the community.</p>
+        <form id="login-form" action="password.html" method="get" onsubmit="return validateLogin();">
+            <label for="login-input">Phone, email, or username</label>
+            <input id="login-input" type="text" placeholder="Enter your account details" required>
+            <button type="submit">Next</button>
+            <p class="form-error" id="login-error">Please enter a valid input.</p>
+        </form>
+        <p class="form-footer"><a class="form-link" href="forgot-password.html">Forgot password?</a></p>
+        <p class="form-footer">Don't have an account? <a class="form-link" href="xtwitter2.html">Sign up</a></p>
+    </article>
+    <script>
+        function validateLogin() {
+            const input = document.getElementById('login-input').value.trim();
+            const errorDiv = document.getElementById('login-error');
+            if (!input) {
+                errorDiv.style.display = 'block';
+                return false;
+            }
+            errorDiv.style.display = 'none';
+            // Store login input temporarily
+            localStorage.setItem('loginInput', input);
+            return true;
+        }
+    </script>
+</body>
+</html>
